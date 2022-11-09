@@ -2,8 +2,15 @@
 
 import styled from 'styled-components';
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blog from './Pages/blog';
+import BSE from './Pages/BSE';
+import SYJ from './Pages/SYJ';
+import JY from './Pages/jy';
+import KNH from './Pages/KNH';
+import KSJ from './Pages/ksj';
+import Welcome from '/Welcome';
 
 const MainWrap = styled.div`
   position: absolute;
@@ -29,38 +36,19 @@ const Name = styled.div`
   bottom: 12rem;
   font-family: 'Raleway', sans-serif;
 `;
-
 function App() {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path='/Blog' element={<Blog />} />
-        </Routes>
-      </Router>
-
-      <modal></modal>
-      {
-        //   modal == true? <Modal 팀원={팀원} color={'black'} />: null
-      }
-      <div>
-        <MainWrap>
-          <Title>
-            <h1>FRM-Team</h1>
-          </Title>
-          <Name>
-            <div style={{ padding: '5rem' }}>BSE</div>
-            <div style={{ padding: '5rem' }}>KSJ</div>
-            <div style={{ padding: '5rem' }}>LJY</div>
-            <div style={{ padding: '5rem' }}>KNH</div>
-            <div style={{ padding: '5rem' }}>SYJ</div>
-          </Name>
-        </MainWrap>
-      </div>
+      <Routes>
+        <Route path='/Blog' element={<Blog />} />
+        <Route path='/' element={<Welcome />} />
+        <Route path='BSE' element={<BSE />} />
+        <Route path='JY' element={<JY />} />
+        <Route path='KNH' element={<KNH />} />
+        <Route path='SYJ' element={<SYJ />} />
+        <Route path='KSJ' element={<KSJ />} />
+      </Routes>
     </div>
   );
 }
-
-//function Modal (props)
-
 export default App;
