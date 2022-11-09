@@ -33,24 +33,58 @@ const Name = styled.div`
   bottom: 12rem;
   font-family: 'Raleway', sans-serif;
 `;
+const Names = styled.div`
+  padding: 5rem;
+`;
 function Welcome() {
+  let navigate = useNavigate();
+
   return (
     <div>
-      <modal></modal>
-      {
-        //   modal == true? <Modal 팀원={팀원} color={'black'} />: null
-      }
       <div>
         <MainWrap>
           <Title>
             <h1>FRM-Team</h1>
           </Title>
           <Name>
-            <div style={{ padding: '5rem' }}>BSE</div>
-            <div style={{ padding: '5rem' }}>KSJ</div>
-            <div style={{ padding: '5rem' }}>LJY</div>
-            <div style={{ padding: '5rem' }}>KNH</div>
-            <div style={{ padding: '5rem' }}>SYJ</div>
+            <Names
+              onClick={() => {
+                navigate('/BSE');
+              }}
+            >
+              {' '}
+              BSE
+            </Names>
+            <Names
+              onClick={() => {
+                navigate('/SYJ');
+              }}
+            >
+              SYJ
+            </Names>
+            <Names
+              onClick={() => {
+                navigate('/KSJ');
+              }}
+            >
+              KSJ
+            </Names>
+            <Names
+              onClick={() => {
+                navigate('/KNH');
+              }}
+            >
+              KNH
+            </Names>
+            <Names
+              onClick={() => {
+                navigate('/LJY');
+              }}
+            >
+              LJY
+            </Names>
+
+            <div></div>
           </Name>
         </MainWrap>
       </div>
