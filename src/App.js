@@ -7,6 +7,7 @@ import JY from './Pages/jy';
 import KNH from './Pages/KNH';
 import KSJ from './Pages/ksj';
 import Welcome from './Welcome';
+import Main from './Pages/Main';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/KNH' element={<KNH />} />
         <Route path='/SYJ' element={<SYJ />} />
         <Route path='/KSJ' element={<KSJ />} />
+        <Route path='/Main' element={<Main />} />
       </Routes>
     </div>
   );
