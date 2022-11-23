@@ -36,6 +36,15 @@ const Name = styled.div`
 const Names = styled.div`
   padding: 5rem;
 `;
+const Mainb = styled.div`
+  display: flex;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 13rem;
+  font-family: 'Raleway', sans-serif;
+`;
+const Mainbtn = styled.div``;
 function Welcome() {
   let navigate = useNavigate();
 
@@ -83,9 +92,16 @@ function Welcome() {
             >
               LJY
             </Names>
-
-            <div></div>
           </Name>
+          <Mainb>
+            <Mainbtn
+              onClick={() => {
+                navigate('/Main');
+              }}
+            >
+              Main
+            </Mainbtn>
+          </Mainb>
         </MainWrap>
       </div>
     </div>
